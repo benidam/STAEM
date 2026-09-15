@@ -1,122 +1,71 @@
+<div align="center">
 
-# 🎮 Staem – Plataforma de Gestión de Videojuegos
+# 🎮 STAEM — Desktop Game Library Manager
 
-![Banner](https://img.shields.io/badge/Proyecto-1ºDAM-brightgreen)
-![Estado](https://img.shields.io/badge/Estado-Desarrollo-yellow)
-![Licencia](https://img.shields.io/badge/Licencia-MIT-blue)
+**Simulador de gestión de biblioteca de videojuegos con persistencia en BBDD**
 
-![Videojuegos](https://media.giphy.com/media/3o6Zt8MgUuvSbkZYWc/giphy.gif)
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![Jackson](https://img.shields.io/badge/Jackson-JSON-black?style=for-the-badge)
+![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
 
-**Staem** es tu **biblioteca centralizada de videojuegos**. Gestiona, organiza y sigue tu progreso con una experiencia intuitiva y visual.
-
----
-
-## 🔥 Problema que Resolvemos
-
-Muchos jugadores tienen juegos en **distintas plataformas** y no disponen de una herramienta para:
-
-- 📚 Organizar su biblioteca.  
-- ⏱ Hacer seguimiento del progreso: `Jugado`, `En progreso`, `Pendiente`.  
-- 📝 Guardar reseñas y puntuaciones personales.  
-- 🧩 Crear perfiles individuales por juego con estadísticas y configuraciones propias.
+</div>
 
 ---
 
-## 👥 Usuarios Objetivo
+##  El Problema que Resolvemos
 
-- Jugadores que quieren controlar todos sus juegos desde un solo lugar.  
-- Personas que buscan centralizar reseñas y valoraciones.  
-- Quienes quieren llevar un seguimiento visual de su progreso.
+Los jugadores actuales tienen su biblioteca fragmentada en múltiples plataformas (Steam, Epic, GOG) sin una forma unificada de gestionar su progreso de forma local y privada. **STAEM** resuelve esto centralizando la gestión mediante una arquitectura cliente-servidor sencilla utilizando Java y MySQL.
 
----
-
-## ⚡ Funcionalidades Principales
+##  Core Features (Bajo el capó)
 
 <details>
-<summary>📂 Gestión de Juegos</summary>
+<summary>📂 Gestión Completa (CRUD)</summary>
 
-- Añadir, modificar y eliminar juegos de la biblioteca.  
-- Filtrar y ordenar juegos según categoría, nombre o progreso.
+- Lógica de negocio robusta en Java para instanciar, añadir, modificar y persistir datos de los videojuegos en la biblioteca.
+- Motor de filtrado por categoría, nombre o estado.
 </details>
 
 <details>
-<summary>⏱ Seguimiento de Progreso</summary>
+<summary>⏱ Tracking de Progreso y RIR</summary>
 
-- Estados: `Jugado`, `En progreso`, `Pendiente`.  
-- Visualización rápida del estado de cada juego.
+- Estados dinámicos: `Jugado`, `En progreso`, `Pendiente`.
+- Generación de estadísticas y visualización rápida del estado de cada título.
 </details>
 
 <details>
-<summary>📝 Valoraciones y Reseñas</summary>
+<summary>👤 Autenticación y Perfiles Aislados</summary>
 
-- Puntuar juegos y añadir reseñas personales.  
-- Editar o eliminar reseñas existentes.
-</details>
-
-<details>
-<summary>🧩 Perfiles de Juegos</summary>
-
-- Cada juego tiene su **perfil propio**.  
-- Almacena configuraciones, estadísticas y notas personalizadas.  
-- Personalización completa para cada jugador.
-</details>
-
-<details>
-<summary>👤 Usuarios y Autenticación</summary>
-
-- Registro e inicio de sesión de usuarios.  
-- Bibliotecas y perfiles personalizados por usuario.
+- Sistema de registro y login.
+- Relación 1:N en la base de datos MySQL para que cada usuario tenga su biblioteca, reseñas y configuraciones totalmente aisladas.
 </details>
 
 ---
 
-## 🛠 Tecnologías Utilizadas
+##  Despliegue y Ejecución
 
-- **Java** – Lógica de negocio.  
-- **MySQL** – Gestor BBDD.  
-- **GitHub** – Control de versiones colaborativo.
+A diferencia del entorno de desarrollo clásico (Eclipse/IntelliJ), el proyecto está preparado para el usuario final.
 
-![Java](https://img.shields.io/badge/Java-ED8B00?logo=java&logoColor=white)
-![MySQL](https://img.shields.io/badge/MySQL-4479A1?logo=mysql&logoColor=white)
+**Opción 1: Ejecutable (Usuarios Windows)**
+1. Descarga `STAEM-v1.exe` desde la raíz.
+2. Ejecuta directamente (la conexión a la BD debe estar configurada en el entorno).
 
-
----
-
-## 🚀 Cómo Ejecutar
-
+**Opción 2: Compilación manual**
 ```bash
-git clone https://github.com/tu-usuario/staem.git
+git clone [https://github.com/benidam/STAEM.git](https://github.com/benidam/STAEM.git)
+# Configurar dependencias de Jackson y el conector de MySQL
+# Compilar y ejecutar Main.java
 ```
 
-1. Abre el proyecto en **Eclipse**.  
-2. Instala las dependencias de **Jackson**.  
-3. Ejecuta la clase principal `Main.java`.  
-4. ¡A disfrutar de tu biblioteca de videojuegos!
+**El Equipo y mi Contribución**
 
----
+## Este proyecto fue desarrollado bajo una simulación de entorno ágil por: Manuel Campos, Álvaro Benítez, Víctor Aguilera y Alejandro Bernal.
 
-## 🧑‍🤝‍🧑 Equipo de Desarrollo
 
-- Manuel Campos Hernández 
-- Álvaro Benítez Cardoso
-- Víctor Aguilera Rodríguez 
-- Alejandro Bernal Real
+Mi enfoque técnico en el repositorio (Álvaro Benítez):
 
----
+Configuración del empaquetado final (.exe) para despliegue nativo.
 
-## 🎯 Próximos Pasos
+Resolución de conflictos en el control de versiones (Git).
 
-- Sincronización con plataformas externas (Steam, Epic, etc.).  
-- Mejora visual con **gráficos de progreso y estadísticas**.  
-- Notificaciones y alertas para novedades de juegos.
-
----
-
-## 📄 Licencia
-
-[MIT License](LICENSE)
-
----
-
-> Hecho con 💚 por el equipo de 1º DAM.  
-> Que la gestión de tus juegos nunca vuelva a ser un caos!
+Refactorización de lógica de backend en Java.
